@@ -157,26 +157,4 @@ WHERE genero_Usuario = 'H'
 AND edad_usuario BETWEEN 17 AND 40;
 
 
-CREATE TABLE Filtrados (
-	id_Filtrado INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-	nombre_Filtrado VARCHAR(50) NOT NULL,
-	ap_Filtrado VARCHAR(50) NOT NULL,
-	am_Filtrado VARCHAR(50) NOT NULL,
-	numero_Filtrado VARCHAR(10) NOT NULL,
-	genero_Filtrado VARCHAR(1) NOT NULL,
-	edad_Filtrado INT NOT NULL
-);
 
-select * from Filtrados;
-
-INSERT INTO Filtrados (id_Filtrado, nombre_Filtrado, ap_Filtrado, am_Filtrado, numero_Filtrado, genero_Filtrado, edad_Filtrado)
-VALUES (SELECT id_Filtrado, nombre_Filtrado, ap_Filtrado, am_Filtrado, numero_Filtrado, genero_Filtrado, edad_Filtrado
-FROM Nuevo_usuario
-WHERE genero_Usuario = 'M'
-  AND edad_usuario BETWEEN 16 AND 39);
-
-INSERT INTO Filtrados (nombre_Filtrado, ap_Filtrado, am_Filtrado, numero_Filtrado, genero_Filtrado, edad_Filtrado)
-VALUES 
-('','','','','',),
-	
-);
